@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#111310">
+    <meta
+      name="description"
+      content="Moussa Keita, étudiant en informatique et IA à l'ESEO. Découvrez mes projets web, mes compétences et mon parcours. Recherche de stage ou d'alternance."
+    >
+    <title>Moussa Keita — Développement & IA</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23d5fa63'/%3E%3Ctext x='8' y='43' font-family='Arial' font-weight='bold' font-size='29'%3EMK%3C/text%3E%3C/svg%3E"
+    >
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="enhancements.css">
+  </head>
+  <body>
+    <a class="skip" href="#projets">Aller aux projets</a>
+
+    <header class="nav">
+      <a class="brand" href="#accueil" aria-label="Moussa Keita, accueil">mk<span>.</span></a>
+      <nav aria-label="Navigation principale">
+        <a href="#projets">Projets</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#competences">Compétences</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Activer le thème clair" title="Changer de thème">◐</button>
+      <a class="nav-contact" href="#contact">Parlons ensemble <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero wrap" id="accueil">
+        <div class="hero-top">
+          <div class="eyebrow">
+            <span class="small-line"></span> MOUSSA KEITA · ÉTUDIANT À L'ESEO
+          </div>
+
+          <a class="opportunity-note" href="#contact">
+            <span class="opportunity-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                <rect x="3" y="7" width="18" height="14" rx="3"/>
+                <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12c5 3 13 3 18 0M12 11v5"/>
+              </svg>
+            </span>
+            <span>
+              <strong>Je recherche un stage<br>ou une alternance.</strong>
+              <span class="opportunity-sub">En développement informatique · Parlons-en</span>
+            </span>
+            <span class="note-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <h1>
+          Moussa Keita.<br>
+          <span class="accent">J'apprends.</span><br>
+          Je développe.
+        </h1>
+
+        <div class="hero-bottom">
+          <p>
+            Étudiant en informatique et IA à l'ESEO.<br>
+            Je développe des projets web et j'explore Python, Java et la Data.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#projets">Explorer mes projets <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="work wrap" id="projets">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">01 / CE QUE JE CONSTRUIS</p>
+            <h2>Mes projets,<br><em>et ce que j'y fais.</em></h2>
+          </div>
+          <p>Trois projets web pour apprendre<br>en faisant, du code au déploiement.</p>
+        </div>
+
+        <div class="project-filters" role="group" aria-label="Filtrer les projets">
+          <button type="button" data-filter="all" aria-pressed="true">Tous les projets</button>
+          <button type="button" data-filter="app" aria-pressed="false">Application PHP / MySQL</button>
+          <button type="button" data-filter="site" aria-pressed="false">Sites web</button>
+        </div>
+
+        <p class="sr-only" id="filter-status" role="status" aria-live="polite"></p>
+
+        <article class="project featured" data-category="app">
+          <div class="project-index">01 / APPLICATION WEB EN ÉQUIPE</div>
+          <div class="project-body">
+            <h3>Letterix.<br>Les lettres en jeu.</h3>
+            <p>Une plateforme de jeux de lettres développée en équipe : Motus et mots mêlés, avec profils de joueurs et classement.</p>
+            <div class="tags">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>JavaScript</span>
+              <span>HTML / CSS</span>
+            </div>
+            <a class="repo-link" href="https://github.com/LoanKma/projet-web-v2" target="_blank" rel="noopener noreferrer">
+              Voir le code sur GitHub <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <details>
+            <summary>Dans les coulisses <span aria-hidden="true">+</span></summary>
+            <div class="detail-content">
+              <p><strong>Le projet.</strong> Concevoir et développer une plateforme proposant deux jeux de lettres, le suivi de progression et un classement des joueurs.</p>
+              <p><strong>Le travail collectif.</strong> Répartir les tâches, suivre l'avancement et coordonner le développement avec l'équipe.</p>
+            </div>
+          </details>
+
+          <span class="project-number" aria-hidden="true">01</span>
+        </article>
+
+        <div class="project-pair">
+          <article class="project secondary" data-category="site">
+            <div class="project-index">02 / DÉVELOPPEMENT WEB</div>
+            <div class="project-body">
+              <h3>Site de restaurant.</h3>
+              <p>Un site vitrine de restaurant avec menu, galerie et formulaire de réservation. Une interface responsive pour s'adapter aux écrans.</p>
+              <div class="tags">
+                <span>HTML / CSS</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
+
+            <details>
+              <summary>Dans les coulisses <span aria-hidden="true">+</span></summary>
+              <div class="detail-content">
+                <p>Création des pages et intégration des contenus du restaurant, avec une mise en page adaptée au mobile et à l'ordinateur.</p>
+              </div>
+            </details>
+          </article>
+
+          <article class="project secondary blue" data-category="site">
+            <div class="project-index">03 / PROJET PERSONNEL</div>
+            <div class="project-body">
+              <h3>Mon portfolio.</h3>
+              <p>Un espace pour présenter mon parcours et mes projets. Navigation par filtres, thème clair ou sombre et contact direct, sur mobile comme sur ordinateur.</p>
+              <div class="tags">
+                <span>HTML / CSS</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
+            <p class="current-project">Le site que vous parcourez.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="about wrap" id="parcours">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">02 / LE PARCOURS</p>
+            <h2>L'informatique,<br><em>en cours et en pratique.</em></h2>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>Moi, c'est Moussa. À l'ESEO, j'explore la programmation, le développement web et les tests logiciels. La Data et l'intelligence artificielle sont la suite de cet apprentissage.</p>
+            <p>J'aime transformer ce que j'apprends en projets concrets. Le travail en équipe compte aussi : mon expérience au BDE m'a appris à coordonner, communiquer et prendre part aux décisions.</p>
+            <a class="text-link" href="https://www.canva.com/d/Jo2c9z4EA_8ujmW" target="_blank" rel="noopener noreferrer">
+              Mon CV sur Canva <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="timeline">
+            <article>
+              <span>DEPUIS 2025</span>
+              <h3>Bachelor Informatique & IA</h3>
+              <p>ESEO · Angers · En cours</p>
+            </article>
+            <article>
+              <span>2022 — 2025</span>
+              <h3>Baccalauréat scientifique</h3>
+              <p>LEP Rose Dieng Kuntz · Dakar</p>
+            </article>
+            <article>
+              <span>2022 — 2024</span>
+              <h3>Vice-président du BDE</h3>
+              <p>LEP Rose Dieng Kuntz</p>
+              <p>Gestion budgétaire, coordination d'équipe et échanges avec les élèves et l'administration.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills wrap" id="competences">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">03 / MA BOÎTE À OUTILS</p>
+            <h2>Ce que j'utilise.<br><em>Ce que j'apprends.</em></h2>
+          </div>
+          <p>Des compétences en construction,<br>mises en pratique au fil des projets.</p>
+        </div>
+
+        <div class="skill-row">
+          <span class="skill-num">01</span>
+          <h3>Développement</h3>
+          <p>Python · Java · JavaScript · PHP · HTML · CSS</p>
+        </div>
+
+        <div class="skill-row">
+          <span class="skill-num">02</span>
+          <h3>Données</h3>
+          <div>
+            <p>SQL · MySQL</p>
+            <p class="muted">Notions : Pandas, NumPy · Jupyter, Anaconda</p>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <span class="skill-num">03</span>
+          <h3>Tests & qualité</h3>
+          <p>JUnit · Mockito · Tests unitaires et paramétrés</p>
+        </div>
+
+        <div class="skill-row">
+          <span class="skill-num">04</span>
+          <h3>Environnement</h3>
+          <p>Git · GitHub · VS Code · IntelliJ IDEA</p>
+        </div>
+
+        <div class="skill-row">
+          <span class="skill-num">05</span>
+          <h3>Travail en équipe</h3>
+          <p>Agile · Scrum · Jira · Figma · Canva</p>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="wrap">
+          <p class="eyebrow">ET POUR LA SUITE ?</p>
+          <h2>Faisons<br><span>connaissance.</span></h2>
+
+          <div class="contact-bottom">
+            <p>
+              Je recherche un stage ou une alternance<br>
+              en développement informatique.<br>
+              Vous recrutez un étudiant dans votre équipe ?
+            </p>
+
+            <div class="email-actions">
+              <a href="mailto:moussa01kta@gmail.com">moussa01kta@gmail.com <span aria-hidden="true">↗</span></a>
+              <button type="button" id="copy-email">Copier l'adresse e-mail</button>
+              <span id="copy-status" role="status" aria-live="polite"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="wrap">
+      <a class="brand" href="#accueil" aria-label="Retour en haut">mk<span>.</span></a>
+      <p>Moussa Keita · Développement & IA</p>
+      <a href="https://github.com/moussa197" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+

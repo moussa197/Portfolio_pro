@@ -1,0 +1,524 @@
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--lime);
+  outline-offset: 5px;
+}
+
+.theme-toggle {
+  margin-left: auto;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  color: var(--text);
+  font-size: 23px;
+  line-height: 1;
+}
+
+.nav nav {
+  margin-left: auto;
+}
+
+.project-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.project-filters button {
+  background: none;
+  border: 1px solid #67705c;
+  color: var(--text);
+  padding: 10px 17px;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+.project-filters button[aria-pressed=true] {
+  background: var(--lime);
+  border-color: var(--lime);
+  color: #172010;
+}
+
+.project[hidden],
+.project-pair[hidden] {
+  display: none;
+}
+
+.project-pair.filtered {
+  margin-top: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.email-actions {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.email-actions button {
+  background: transparent;
+  color: #172010;
+  border: 1px solid #506728;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 8px 12px;
+}
+
+.email-actions button:hover {
+  background: #172010;
+  color: #d5fa63;
+}
+
+.email-actions button:focus-visible {
+  outline-color: #172010;
+}
+
+#copy-status {
+  font-size: 13px;
+  min-height: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(65px,7.7vw,112px);
+}
+
+html[data-theme=light] {
+  color-scheme: light;
+  --bg: #f3f5f0;
+  --text: #182219;
+  --muted: #586451;
+  --line: #c8d0c1;
+}
+
+html[data-theme=light] .hero-bottom p,
+html[data-theme=light] .about-copy>p {
+  color: #42513d;
+}
+
+html[data-theme=light] .hero .accent,
+html[data-theme=light] .brand span,
+html[data-theme=light] .hero-note b,
+html[data-theme=light] .timeline span {
+  color: #496b13;
+}
+
+html[data-theme=light] .hero-note {
+  color: #586451;
+}
+
+html[data-theme=light] nav a:hover,
+html[data-theme=light] .text-link:hover {
+  color: #496b13;
+}
+
+html[data-theme=light] .small-line,
+html[data-theme=light] .timeline article:before {
+  background: #496b13;
+}
+
+html[data-theme=light] a:focus-visible,
+html[data-theme=light] button:focus-visible {
+  outline-color: #496b13;
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: clamp(46px,11.8vw,69px);
+  }
+
+  .theme-toggle {
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+
+  .nav-contact {
+    font-size: 11px;
+    padding: 8px 9px;
+  }
+
+  .nav-contact span {
+    margin-left: 6px;
+  }
+
+  .project-filters button {
+    font-size: 12px;
+    padding: 9px 12px;
+  }
+
+  .featured h3 {
+    font-size: 43px;
+  }
+
+  .secondary h3 {
+    font-size: 35px;
+  }
+
+  .hero-bottom p {
+    max-width: 31ch;
+  }
+}
+
+/* A wider canvas on desktop, with consistent edges from header to footer. */
+:root {
+  --gutter: clamp(24px,3.2vw,72px);
+}
+
+.wrap {
+  max-width: none;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.nav {
+  max-width: none;
+  margin-left: var(--gutter);
+  margin-right: var(--gutter);
+}
+
+.hero h1 {
+  font-size: clamp(70px,9.7vw,180px);
+}
+
+.hero-note {
+  right: var(--gutter);
+}
+
+.hero {
+  padding-top: 52px;
+  padding-bottom: 48px;
+}
+
+.work,
+.about,
+.skills {
+  padding-top: 72px;
+}
+
+.section-head h2 {
+  font-size: clamp(40px,4.5vw,76px);
+}
+
+.project-pair {
+  gap: 24px;
+}
+
+.project {
+  padding: clamp(28px,3vw,56px);
+}
+
+.about-grid {
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  gap: clamp(45px,8vw,150px);
+}
+
+.about-copy {
+  max-width: 680px;
+}
+
+.skill-row {
+  grid-template-columns: 55px minmax(230px,25%) 1fr;
+}
+
+@media (min-width: 1600px) {
+  .hero-bottom p {
+    font-size: 21px;
+  }
+
+  .project h3 {
+    font-size: 70px;
+  }
+
+  .secondary h3 {
+    font-size: 52px;
+  }
+
+  .project p {
+    max-width: 680px;
+    font-size: 18px;
+  }
+
+  .about-copy>p {
+    font-size: 21px;
+  }
+
+  .skill-row p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero h1 {
+    font-size: clamp(65px,10.5vw,95px);
+  }
+
+  .hero-note {
+    display: none;
+  }
+
+  .skill-row {
+    grid-template-columns: 35px 205px 1fr;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --gutter: 20px;
+  }
+
+  .hero h1 {
+    font-size: clamp(46px,12.3vw,70px);
+  }
+
+  .hero {
+    padding-top: 36px;
+    padding-bottom: 40px;
+  }
+
+  .work,
+  .about,
+  .skills {
+    padding-top: 45px;
+  }
+
+  .section-head h2 {
+    font-size: 36px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .project {
+    padding: 24px;
+  }
+
+  .skill-row {
+    grid-template-columns: 24px 1fr;
+  }
+
+  .skill-row>p,
+  .skill-row>div {
+    grid-column: 2;
+  }
+}
+
+.hero-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.opportunity-note {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  border: 1px solid #6e8745;
+  border-radius: 14px;
+  background: #1d2518;
+  box-shadow: 0 10px 35px #0002;
+  max-width: 510px;
+  color: var(--text);
+}
+
+.opportunity-note strong {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -.4px;
+}
+
+.opportunity-sub {
+  display: block;
+  font-size: 13px;
+  color: #c5cfb8;
+  margin-top: 7px;
+}
+
+.opportunity-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--lime);
+  color: #172010;
+}
+
+.note-arrow {
+  font-size: 22px;
+  color: var(--lime);
+  margin-left: 5px;
+}
+
+.repo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid #172010;
+  padding: 11px 17px;
+  border-radius: 5px;
+  margin: 0 0 25px;
+}
+
+.current-project {
+  border-top: 1px solid #17201040;
+  padding-top: 17px;
+  margin: 0;
+  font-size: 14px !important;
+  font-weight: 600;
+}
+
+html[data-theme=light] .opportunity-note {
+  background: #eaf0df;
+  border-color: #8c9e70;
+  box-shadow: 0 10px 28px #233b1210;
+}
+
+html[data-theme=light] .opportunity-sub {
+  color: #4c6039;
+}
+
+html[data-theme=light] .note-arrow {
+  color: #496b13;
+}
+
+.repo-link span,
+.project-link span,
+.text-link span,
+.note-arrow,
+.button span {
+  display: inline-block;
+  transition: transform .18s ease;
+}
+
+.opportunity-note,
+.theme-toggle,
+.project-filters button,
+.repo-link {
+  transition: transform .2s ease, background-color .2s ease, border-color .2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .repo-link:hover {
+    background: #172010;
+    color: var(--lime);
+  }
+
+  .opportunity-note:hover {
+    transform: translateY(-3px);
+    border-color: var(--lime);
+  }
+
+  .repo-link:hover span,
+  .project-link:hover span,
+  .text-link:hover span,
+  .opportunity-note:hover .note-arrow {
+    transform: translate(3px,-3px);
+  }
+
+  .button:hover span {
+    transform: translateY(3px);
+  }
+
+  .theme-toggle:hover {
+    transform: rotate(14deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-top {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .opportunity-note {
+    max-width: none;
+  }
+
+  .opportunity-note strong {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-top {
+    gap: 18px;
+  }
+
+  .opportunity-note {
+    width: 100%;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .opportunity-icon {
+    flex-basis: 38px;
+    height: 38px;
+  }
+
+  .opportunity-note strong {
+    font-size: 18px;
+  }
+
+  .opportunity-sub {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .note-arrow {
+    margin-left: auto;
+    font-size: 20px;
+  }
+
+  .hero h1 {
+    margin-top: 28px;
+  }
+
+  .featured h3 {
+    font-size: 39px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  .opportunity-note:hover,
+  .theme-toggle:hover,
+  .button:hover {
+    transform: none;
+  }
+}
