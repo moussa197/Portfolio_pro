@@ -15,6 +15,7 @@
     >
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="enhancements.css">
+    <link rel="stylesheet" href="chat-widget.css">
   </head>
   <body>
     <a class="skip" href="#projets">Aller aux projets</a>
@@ -33,8 +34,16 @@
     <main>
       <section class="hero wrap" id="accueil">
         <div class="hero-top">
-          <div class="eyebrow">
-            <span class="small-line"></span> MOUSSA KEITA · ÉTUDIANT À L'ESEO
+          <div class="hero-intro">
+            <div class="eyebrow">
+              <span class="small-line"></span> MOUSSA KEITA · ÉTUDIANT À L'ESEO
+            </div>
+
+            <button class="ask-hook" type="button" data-open-chat>
+              <span aria-hidden="true">💬</span>
+              <span>Une question sur mon parcours ? <strong>Demandez à mon assistant IA</strong>, que j'ai développé moi-même.</span>
+              <span class="note-arrow" aria-hidden="true">↗</span>
+            </button>
           </div>
 
           <a class="opportunity-note" href="#contact">
@@ -75,19 +84,55 @@
             <p class="eyebrow">01 / CE QUE JE CONSTRUIS</p>
             <h2>Mes projets,<br><em>et ce que j'y fais.</em></h2>
           </div>
-          <p>Trois projets web pour apprendre<br>en faisant, du code au déploiement.</p>
+          <p>Quatre projets pour apprendre<br>en faisant, du code au déploiement.</p>
         </div>
 
         <div class="project-filters" role="group" aria-label="Filtrer les projets">
           <button type="button" data-filter="all" aria-pressed="true">Tous les projets</button>
+          <button type="button" data-filter="ia" aria-pressed="false">IA</button>
           <button type="button" data-filter="app" aria-pressed="false">Application PHP / MySQL</button>
           <button type="button" data-filter="site" aria-pressed="false">Sites web</button>
         </div>
 
         <p class="sr-only" id="filter-status" role="status" aria-live="polite"></p>
 
+        <article class="project featured" data-category="ia">
+          <div class="project-index">01 / ASSISTANT IA</div>
+          <div class="project-body">
+            <h3>Ask Moussa.<br>Assistant IA.</h3>
+            <p>Chatbot IA intégré à ce portfolio, qui répond aux questions sur mon parcours à partir de mes documents. Développé en Python avec FastAPI et l'API Claude, testé avec pytest et déployé sur Render, avec limitation de requêtes, CORS et protection contre l'injection de prompt.</p>
+            <div class="tags">
+              <span>Python</span>
+              <span>FastAPI</span>
+              <span>API Claude</span>
+              <span>pytest</span>
+              <span>Render</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <button class="repo-link is-primary" type="button" data-open-chat>
+                Essayer <span aria-hidden="true">↗</span>
+              </button>
+              <a class="repo-link" href="https://github.com/moussa197/askMoussa" target="_blank" rel="noopener noreferrer">
+                Voir le code sur GitHub <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <details>
+            <summary>Dans les coulisses <span aria-hidden="true">+</span></summary>
+            <div class="detail-content">
+              <p><strong>Le fonctionnement.</strong> Une API FastAPI reçoit la question, l'envoie à l'API Claude avec mes documents comme contexte, et renvoie une réponse à la bulle de chat de ce site.</p>
+              <p><strong>La sécurité.</strong> Limitation du nombre de requêtes, CORS, taille des questions limitée et protection contre l'injection de prompt.</p>
+              <p><strong>La qualité.</strong> Des tests automatisés avec pytest, puis un déploiement sur Render.</p>
+            </div>
+          </details>
+
+          <span class="project-number" aria-hidden="true">01</span>
+        </article>
+
         <article class="project featured" data-category="app">
-          <div class="project-index">01 / APPLICATION WEB EN ÉQUIPE</div>
+          <div class="project-index">02 / APPLICATION WEB EN ÉQUIPE</div>
           <div class="project-body">
             <h3>Letterix.<br>Les lettres en jeu.</h3>
             <p>Une plateforme de jeux de lettres développée en équipe : Motus et mots mêlés, avec profils de joueurs et classement.</p>
@@ -110,12 +155,12 @@
             </div>
           </details>
 
-          <span class="project-number" aria-hidden="true">01</span>
+          <span class="project-number" aria-hidden="true">02</span>
         </article>
 
         <div class="project-pair">
           <article class="project secondary" data-category="site">
-            <div class="project-index">02 / DÉVELOPPEMENT WEB</div>
+            <div class="project-index">03 / DÉVELOPPEMENT WEB</div>
             <div class="project-body">
               <h3>Site de restaurant.</h3>
               <p>Un site vitrine de restaurant avec menu, galerie et formulaire de réservation. Une interface responsive pour s'adapter aux écrans.</p>
@@ -134,7 +179,7 @@
           </article>
 
           <article class="project secondary blue" data-category="site">
-            <div class="project-index">03 / PROJET PERSONNEL</div>
+            <div class="project-index">04 / PROJET PERSONNEL</div>
             <div class="project-body">
               <h3>Mon portfolio.</h3>
               <p>Un espace pour présenter mon parcours et mes projets. Navigation par filtres, thème clair ou sombre et contact direct, sur mobile comme sur ordinateur.</p>
@@ -198,7 +243,7 @@
         <div class="skill-row">
           <span class="skill-num">01</span>
           <h3>Développement</h3>
-          <p>Python · Java · JavaScript · PHP · HTML · CSS</p>
+          <p>Python · FastAPI · Java · JavaScript · PHP · HTML · CSS</p>
         </div>
 
         <div class="skill-row">
@@ -212,18 +257,27 @@
 
         <div class="skill-row">
           <span class="skill-num">03</span>
-          <h3>Tests & qualité</h3>
-          <p>JUnit · Mockito · Tests unitaires et paramétrés</p>
+          <h3>IA</h3>
+          <div>
+            <p>API Claude · Prompt engineering · Assistant sur documents</p>
+            <p class="muted">Sécurisation : limitation de requêtes · CORS · protection contre l'injection de prompt</p>
+          </div>
         </div>
 
         <div class="skill-row">
           <span class="skill-num">04</span>
-          <h3>Environnement</h3>
-          <p>Git · GitHub · VS Code · IntelliJ IDEA</p>
+          <h3>Tests & qualité</h3>
+          <p>JUnit · Mockito · pytest · Tests unitaires et paramétrés</p>
         </div>
 
         <div class="skill-row">
           <span class="skill-num">05</span>
+          <h3>Environnement</h3>
+          <p>Git · GitHub · VS Code · IntelliJ IDEA · Render</p>
+        </div>
+
+        <div class="skill-row">
+          <span class="skill-num">06</span>
           <h3>Travail en équipe</h3>
           <p>Agile · Scrum · Jira · Figma · Canva</p>
         </div>
@@ -258,6 +312,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="chat-widget.js"></script>
   </body>
 </html>
 
